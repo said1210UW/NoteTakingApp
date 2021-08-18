@@ -7,12 +7,9 @@
     //do any dom stuff here
     let enterButton = document.getElementById("enter");
 
-    /*enterButton.addEventListener('click', function() {
-      let text = returnText();
-      alert(text);
-    });*/
-
-    enterButton.addEventListener('click',createCard);
+    enterButton.addEventListener('click',function(){
+      createCard(returnText());
+    });
 
 
     let clearButton = document.getElementById("clear");
@@ -25,12 +22,12 @@
     return enteredText;
   }
 
-  function createCard() {
+  function createCard(enteredText) {
     let card = document.createElement("article");
     let cardContainer = document.getElementById('noteContainer');
     cardContainer.appendChild(card);
     card.classList.add("card");
-    console.log(card);
+    card.innerHTML = enteredText;
   }
 
   function clearText() {
