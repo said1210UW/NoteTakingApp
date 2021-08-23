@@ -1,20 +1,22 @@
-"use strict";
+//I am Subbers
 
+"use strict";
 (function() {
   window.addEventListener('load', innit);
 
   function innit() {
     //do any dom stuff here
     let enterButton = document.getElementById("enter");
-
+    let entryAmount = document.getElementsByClassName("card");
     enterButton.addEventListener('click',function(){
-      createCard(returnText());
+      if (entryAmount.length < 5) {
+        createCard(returnText());
+      }
     });
 
-
     let clearButton = document.getElementById("clear");
-
     clearButton.addEventListener('click', clearText);
+
   }
 
   function returnText() {
