@@ -8,14 +8,11 @@
     //do any dom stuff here
     let enterButton = document.getElementById("enter");
     let entryAmount = document.getElementsByClassName("card");
-    let cardRemover = document.querySelector("")
-    let counter = 0;
 
     //Enter EventListner
     enterButton.addEventListener('click',function(){
-      counter++;
       if (entryAmount.length < 5) { //Limit Cards to Avoid OverFilling
-        createCard(returnText(), counter);
+        createCard(returnText(), entryAmount.length + 1);
       }
     });
 
