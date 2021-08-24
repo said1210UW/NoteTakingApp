@@ -35,8 +35,13 @@ h1 {
   color: #05386B;
 }
 
+#entryArea {
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50em;
+}
 
-button {
+#buttonContainer > button {
   background-color:  #05386B;
   color: #edf5e1;
   border: none;
@@ -44,7 +49,7 @@ button {
   width: 90px;
 }
 
-button:hover {
+#buttonContainer > button:hover {
   background-color: #edf5e1ab;
   color: #05386B;
   transition: .5s;
@@ -57,18 +62,6 @@ button:hover {
 
 }
 
-#noteContainer {
-  flex-wrap: wrap;
-  border-radius: 25px;
-  background: #edf5e1;
-  padding: 20px;
-  margin-top: 10%;
-  width: 60%;
-  height: 40vh;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-            rgba(0, 0, 0, 0.19);
-}
-
 input {
   border: #5cdb95;
   border-radius: 15px;
@@ -76,26 +69,49 @@ input {
 
 #buttonContainer {
   margin-left: 1em;
-
   gap: 1em;
 }
 
+#noteContainer {
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 90%;
+  height: 60vh;
+}
+
 .card {
-  border-radius: 25px;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100px;
-  width: 100px;
+  justify-content: space-between;
+  background: #edf5e1;
+  color: black;
   margin: auto;
-  background: black;
-  color: #E8E8E8;
+  padding: 20px;
+  width: 20em;
+  height: 10em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+            rgba(0, 0, 0, 0.19);
 }
 
-#entryArea {
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 50em;
+.card > h2 {
+  color:#05386B;
+  margin: 0%;
 }
 
+.card > p {
+  max-width: 100%;
+  max-height: 60%;
 
+}
+
+.card > button {
+  width: fit-content;
+  height: fit-content;
+  color: red;
+}
+
+.card > button:hover {
+  background-color: #FF6B6B;
+  border: none;
+  border-radius: 15px;
+  color: #edf5e1;
+}
